@@ -41,7 +41,8 @@
   <h2>2. Hesap açarsan toplanan bilgiler</h2>
   <p>Hesap açmak isteğe bağlıdır ve bulut yedekleme ile bazı ek özellikler için gerekir.</p>
   <ul>
-    <li><strong>E-posta adresi ve şifre:</strong> giriş yapabilmen için. Şifren şifrelenmiş olarak saklanır; biz göremeyiz.</li>
+    <li><strong>Giriş bilgisi:</strong> şifre kullanılmaz. E-postayla girersen e-posta adresin (her girişte e-postana tek kullanımlık kod gönderilir). <strong>Apple ile</strong> girersen Apple'ın paylaştığı ad ve e-posta (Apple'ın gizli e-posta adresi olabilir), <strong>Google ile</strong> girersen Google hesabındaki ad ve e-posta.</li>
+    <li><strong>Hesap bilgisi:</strong> ad soyad, uygulamada görünen adın ve 13 yaşından büyük olduğuna dair onayın.</li>
     <li><strong>Bulut yedeği:</strong> yedeklemeyi kullanırsan çalışma verilerinin (ilerleme, hatalar, Defterim kayıtları, ayarlar) bir kopyası, telefonunu değiştirdiğinde geri yükleyebilmen için saklanır.</li>
     <li><strong>Üyelik bilgisi:</strong> planın (ücretsiz / premium) ve kullandığın premium kodları.</li>
   </ul>
@@ -63,13 +64,21 @@
   <h2>5. Hizmet sağlayıcı</h2>
   <p>Hesap ve bulut yedeği, bulut veritabanı hizmeti <strong>Supabase</strong> üzerinde saklanır.
   Veriler bu hizmetin sunucularında, Türkiye dışında işlenebilir. Bağlantılar şifrelidir (HTTPS) ve
-  her kullanıcı yalnızca kendi verisine erişebilir.</p>
+  her kullanıcı yalnızca kendi verisine erişebilir. Giriş kodu e-postaları <strong>Gmail</strong> (Google)
+  üzerinden gönderilir. Apple ya da Google ile girişte kimlik doğrulamayı o şirket yapar.</p>
 
   <h2>6. Saklama süresi ve silme</h2>
   <p>Bilgilerin hesabın açık olduğu sürece saklanır. Uygulamada <strong>Profil → Hesap → “Hesabımı sil”</strong> ile
-  hesabını istediğin an silebilirsin; hesabın silinince bulut yedeğin ve hesaba bağlı bilgilerin de silinir.
-  Havuza eklenmiş ve herkese açılmış içerik (ör. kabul edilen bir kelime önerisi) kalır, ama artık senin adınla ilişkilendirilmez.
-  Telefonundaki veriler uygulamayı silince kalkar.</p>
+  hesabını istediğin an silebilirsin:</p>
+  <ul>
+    <li>Bu telefondaki veriler <strong>hemen</strong> silinir ve hesaptan çıkılır.</li>
+    <li>Hesabın ve bulut yedeğin <strong>30 gün</strong> bekletilir. Bu sürede aynı hesapla tekrar giriş yaparsan silme iptal olur.</li>
+    <li>30 gün içinde giriş yapmazsan hesabın, bulut yedeğin ve hesaba bağlı bütün bilgilerin <strong>kalıcı olarak</strong> silinir.</li>
+    <li>Kendi eklediğin kelime ve cümleler, adın, e-postan ve kişisel notların <strong>olmadan</strong> içerik havuzunu geliştirmek için saklanabilir; kime ait oldukları artık bilinemez.</li>
+    <li>Havuza eklenmiş ve herkese açılmış içerik (ör. kabul edilen bir kelime önerisi) kalır, ama artık senin adınla ilişkilendirilmez.</li>
+  </ul>
+  <p>“Çıkış yap” dediğinde ilerlemen önce buluta yedeklenir, sonra bu telefondan silinir; aynı hesapla girince geri yükleyebilirsin.
+  Hesap açmadan kullanıyorsan veriler yalnız telefonundadır ve uygulamayı silince kalkar.</p>
 
   <h2>7. Çocuklar</h2>
   <p>Uygulama 13 yaşından küçük çocuklardan bilerek kişisel bilgi toplamaz.</p>
@@ -94,11 +103,11 @@
   do not sell your data.</p>
   <ul>
     <li><strong>On your device:</strong> words, progress, mistakes, notebook entries, session history and settings.</li>
-    <li><strong>Optional account:</strong> email and password (stored hashed); if you use cloud backup, a copy of your study data; your plan (free / premium) and redeemed premium codes.</li>
+    <li><strong>Optional account (no password):</strong> sign in with an emailed one-time code, with Apple (name and email, possibly Apple's private relay address) or with Google (name and email); your name, display name and age confirmation; if you use cloud backup, a copy of your study data; your plan (free / premium) and redeemed premium codes.</li>
     <li><strong>Your own words and sentences:</strong> entries you add and back up can be viewed by the app's administrator and content editors, and suitable ones may be <em>copied</em> into the shared word pool (your entry stays as it is; your name is not shown).</li>
     <li><strong>What you send:</strong> problem reports and content suggestions you submit, stored with your account to fix content.</li>
-    <li><strong>Provider:</strong> account and backup data are stored with Supabase and may be processed outside Türkiye, over encrypted connections; each user can access only their own data.</li>
-    <li><strong>Deletion:</strong> you can delete your account any time in Profile → Account → “Hesabımı sil”; your cloud backup is deleted with it. Content already published to the shared pool stays, no longer linked to you.</li>
+    <li><strong>Providers:</strong> account and backup data are stored with Supabase and may be processed outside Türkiye, over encrypted connections; each user can access only their own data. Sign-in code emails are sent via Gmail (Google); Apple or Google verify identity when you sign in with them.</li>
+    <li><strong>Deletion:</strong> in Profile → Account → “Hesabımı sil”. Data on the phone is deleted immediately; your account and cloud backup are kept for 30 days — signing in again within that time cancels the deletion. After 30 days without a sign-in, your account and all linked data are permanently deleted. Words and sentences you added may be kept without your name, email or personal notes to improve the content pool. Content already published to the shared pool stays, no longer linked to you.</li>
     <li><strong>Children:</strong> we do not knowingly collect personal data from children under 13.</li>
   </ul>
   <p>Contact: Buğra Çolak — <a href="mailto:veralingua.app@gmail.com">veralingua.app@gmail.com</a></p>
